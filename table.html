@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Table</h1>
+    </header>
+    <main>
+        <h2>
+            Product Inventory
+        </h2>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Product name</th>
+                    <th>Price</th>
+                    <th> Quantity</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Iphone 17 Pro</td>
+                    <td>1500$</td>
+                    <td>10</td>
+                    <td rowspan="2">In Stock</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Samsung Galaxy S26 Ultra</td>
+                    <td>1200$</td>
+                    <td>15</td>
+                    <!-- <td>In Stock</td> -->
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Google Pixel 10PRO XL</td>
+                    <td>1000$</td>
+                    <td>0</td>
+                    <td>Out of Stock</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        Total:
+                    </td>
+                    <td>
+                        3700$
+                    </td>
+                    <td>
+                        25
+                    </td>
+                    <td>
+                        -
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <section>
+            <h2>Invoice</h2>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th rowspan="2">
+                        N°
+                    </th>
+                    <th rowspan="2">
+                        Product name
+                    </th>
+                    <th rowspan="2">
+                        Unit Price
+                    </th>
+                    <th rowspan="2">
+                        Quantity
+                    </th>
+                    <th colspan="2">
+                        Amount
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        USD
+                    </th>
+                    <th>
+                        Rial
+                    </th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Iphone 17 Pro</td>
+                    <td>1,500$</td>
+                    <td>2</td>
+                    <td>3,000$</td>
+                    <td>12,300,000Rial</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Samsung Galaxy S26 Ultra</td>
+                    <td>1,200$</td>
+                    <td>1</td>
+                    <td>1,200$</td>
+                    <td>4,920,000Rial</td>
+                </tr>
+                <tr>
+
+                    <td colspan="4" style="text-align: right;">Total:</td>
+                    <td>4,200$</td>
+                    <td>17,220,000Rial</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Date: 23-03-2026</p>
+    </footer>
+</body>
+
+</html>
