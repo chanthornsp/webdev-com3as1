@@ -1,15 +1,91 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Week 1 of Web Development</title>
-  </head>
-  <body>
-    <h1>Web Development</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati
-      corrupti facilis alias odit quisquam distinctio officia quo. In, expedita?
-      Adipisci quibusdam neque porro dolores debitis ipsa explicabo reiciendis
-      provident?
-    </p>
-  </body>
+
+<head>
+  <title>Week 3 of Web Development</title>
+  <style>
+    p {
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      background-color: purple;
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1 style="color:blue; font-size: 34px;">Web Development: HTML Form</h1>
+  </header>
+  <main>
+    <h2>
+      Member Registration Form
+    </h2>
+    <form action="create.html" method="get">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" class="base-input" name="full-name" />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" class="base-input" id="email">
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" class="base-input" id="password" />
+        </div>
+        <div>
+          <label for="dob">Date of birth:</label>
+          <input type="date" name="dob" class="base-input" id="dob" />
+        </div>
+        <div>
+          Gender:
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male" />
+          , <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Membership details</legend>
+        <div>
+          <label for="member-type">
+            Membership Type:
+          </label>
+          <select name="member-type" id="member-type">
+            <option value="free">Free</option>
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+            <option value="ultra">Ultra</option>
+          </select>
+        </div>
+        <div>
+          <label for="update-alert">
+            Receive updates and alerts:
+          </label>
+          <input type="checkbox" name="update-alert" id="update-alert" value="yes" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Additional information</legend>
+        <label for="note">Notes:</label>
+        <textarea name="note" id="note" rows="5"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Actions</legend>
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn btn-warning">Reset</button>
+        <button type="button" class="btn btn-danger">Cancel</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <p>Date: 31/03/2026</p>
+  </footer>
+
+</body>
+
 </html>
