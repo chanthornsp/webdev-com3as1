@@ -1,0 +1,74 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* defaul (mobile) < 768px */
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+.grid-card .card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 1rem;
+}
+body {
+  padding: 20px;
+  background-color: lightblue;
+}
+
+/* Tablet >= 768px */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: lightgreen;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .grid-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Desktop >= 1024px */
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: lightcoral;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .grid-card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Desktop >= 1440px */
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: lightgoldenrodyellow;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .grid-card {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

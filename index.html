@@ -1,15 +1,29 @@
 <!doctype html>
-<html>
+<html class="dark">
   <head>
-    <title>Week 1 of Web Development</title>
+    <title>Week 5, CSS Variable</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <h1>Web Development</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati
-      corrupti facilis alias odit quisquam distinctio officia quo. In, expedita?
-      Adipisci quibusdam neque porro dolores debitis ipsa explicabo reiciendis
-      provident?
-    </p>
+    <header>
+      <div class="container">
+        <h1>Week 5</h1>
+        <p>CSS Variable</p>
+      </div>
+    </header>
+    <main class="container">
+      <h2>Section 1</h2>
+      <button id="theme">Change color theme</button>
+    </main>
+    <footer>
+      <p>Date: 21/04/2026</p>
+    </footer>
+    <script>
+      const themeBtn = document.getElementById("theme");
+      themeBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+    </script>
   </body>
 </html>
