@@ -1,15 +1,101 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Week 1 of Web Development</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <script>
+      // js code here...
+      function greeting(name, age = 25) {
+        // alert("Hello " + name + " My age is " + age);
+        // es6
+        alert(`Hello My name is ${name} and my age is ${age}!`);
+      }
+      // greeting("Sok San", 30);
+    </script>
+    <style>
+      .hide {
+        display: none;
+      }
+      .bg-color {
+        background-color: #d8d8d8;
+      }
+    </style>
   </head>
   <body>
-    <h1>Web Development</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni obcaecati
-      corrupti facilis alias odit quisquam distinctio officia quo. In, expedita?
-      Adipisci quibusdam neque porro dolores debitis ipsa explicabo reiciendis
-      provident?
-    </p>
+    <header>
+      <h1>JavaScript</h1>
+      <!-- mobile nav-->
+      <div>
+        <button id="mobile-nav-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu-icon lucide-menu"
+          >
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+          </svg>
+        </button>
+        <nav class="" id="mobile-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h2 id="title2">Basic JavaScript</h2>
+      <hr />
+      <h3>Inline JavaScript</h3>
+      <div>
+        <button onclick="interactWithTitle2()">Click Me</button>
+        <br />
+        <button onclick="resetTitle2()">Reset</button>
+      </div>
+      <h3>Internal</h3>
+      <div>
+        <button onclick="greeting('Sok San', 29)">Internal Click</button>
+      </div>
+    </main>
+    <footer>
+      <p>Date: 19/05/2026</p>
+    </footer>
+
+    <script>
+      function interactWithTitle2() {
+        const title2 = document.getElementById("title2");
+        title2.textContent = "Basic JavaScript (DOM)";
+        title2.style.backgroundColor = "red";
+        title2.style.color = "white";
+      }
+      function resetTitle2() {
+        const title2 = document.getElementById("title2");
+        title2.textContent = "Basic JavaScript";
+        title2.style.backgroundColor = "transparent";
+        title2.style.color = "black";
+      }
+
+      function toggleMobileNav() {
+        const toggleBtn = document.getElementById("mobile-nav-toggle");
+        const mobileNav = document.getElementById("mobile-nav");
+        const body = document.body;
+        toggleBtn.addEventListener("click", function () {
+          mobileNav.classList.toggle("hide");
+          body.classList.toggle("bg-color");
+        });
+      }
+      toggleMobileNav();
+    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
