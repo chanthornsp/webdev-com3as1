@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --font-hand: "Just Another Hand", cursive;
+  --font-kdam: "Kdam Thmor Pro", sans-serif;
+}
+
+/* custom css */
+
+.btn-primary {
+  @apply px-4 py-2 bg-teal-600 text-white cursor-pointer rounded-lg hover:bg-teal-900 transition-all duration-300 ease-in hover:scale-105;
+}
