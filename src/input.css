@@ -1,9 +1,15 @@
 @import "tailwindcss";
+/* @import "flowbite/src/themes/default"; */
+@plugin "daisyui";
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-hand: "Just Another Hand", cursive;
   --font-kdam: "Kdam Thmor Pro", sans-serif;
+}
+
+@plugin "daisyui" {
+  themes: all;
 }
 
 /* custom css */
